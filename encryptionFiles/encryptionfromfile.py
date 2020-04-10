@@ -1,8 +1,9 @@
 from encryption import encryption as en
 
-y = open("dec.txt", "w")
-f = open("text.txt", 'r')
+
+fileToWrite = open("dec.txt", "w")
+fileToRead = open("text.txt", 'r')
 k = int(input("insert a key: "))
-for l in f:
+for l in fileToRead:
     print(l, end="")
-    y.write((en(l, k) + "\n"))
+    fileToWrite.write((en(l.strip(), k) + '\n'))
