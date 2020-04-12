@@ -92,8 +92,8 @@ def paddle_left():
 create_blocks()
 
 wn.listen()
-wn.onkeypress(paddle_left, "Up")
-wn.onkeypress(paddle_right, "Down")
+wn.onkeypress(paddle_left, "Left")
+wn.onkeypress(paddle_right, "Right")
 # mainloop
 while True:
     wn.update()
